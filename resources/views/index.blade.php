@@ -20,9 +20,9 @@
            <a href="#" style="color: black">Contact</a>
            
            
-           <select>
+           {{-- <select>
             <option value="Courses">Courses</option>
-           </select>
+           </select> --}}
            <a href="/logout">Logout</a>     
            @else
            <a href="/" style="color: black">Home</a>
@@ -38,16 +38,16 @@
           <div class="donate-container">
               <h1>Select Donation Amount</h1>
               <div class="donate-btns">
-                <button class="donate-amount">₦50,000</button>
-                <button class="donate-amount">₦50,000</button>
-                <button class="donate-amount">₦50,000</button>
+                <button class="donate-amount">₦1,000</button>
+                <button class="donate-amount">₦20,000</button>
+                <button class="donate-amount">₦30,000</button>
                 <button class="donate-amount">₦50,000</button>
               </div>
               <div class="enroll-container">
                   <h1>will support enrollment of both genders</h1>
               </div>
               <p>We have volunteers that are ready to work day and night to see the sustainable of the project</p>
-              <button class="donate-button">DONATE NOW</button>
+             <a href="/donate"> <button class="donate-button">DONATE NOW</button></a>
           </div>
       </div>
       <div class="middle-section">

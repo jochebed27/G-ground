@@ -16,6 +16,7 @@ class Gender extends Authenticatable
         'age',
         'email',
         'address',
+        'courses',
         'password'
 
     ];

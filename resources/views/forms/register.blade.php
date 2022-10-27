@@ -4,61 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link href="{{asset('https://fonts.googleapis.com/css2?family=Anybody&family=Cinzel&family=Courgette&family=Koulen&family=Montserrat:wght@400;500&family=Poppins&display=swap')}}" rel="stylesheet">
     <title>Document</title>
 </head>
 <body> 
-    <h1>SignUp Form</h1>
+   <div class="register-wrapper">
+    <h1>Sign Up</h1>
     <form action="" method="POST">
         @csrf
         <div class="form-group">
-            First Name: <input type="text" name="firstname" placeholder="firstname" value="{{ old('firstname')}}">
+         <div class="input-container">
+            <label for="firstname">First name</label>
+            <input type="text" class="input-field" name="firstname"  value="{{ old('firstname')}}">
             @if ($errors)
-               @error ('firstname')
-                  <p>{{$message}}</p>
-               @enderror
-            @endif
-        </div>
-        <div class="form-group">
-           Last Name:<input type="text" name="lastname" placeholder="lastname" value="{{ old('lastname')}}"> 
-           @if ($errors)
-            @error ('lastname')
-                <p>{{$message}}</p>
+            @error ('firstname')
+               <p style="color: red">{{$message}}</p>
             @enderror
-           @endif
-        </div>
-        <div class="form-group">
-            Enter Email: <input type="email" name="email" placeholder="email address" value="{{ old('email')}}">
-            @if ($errors)
-               @error ('email')
-                  <p>{{$message}}</p>
-               @enderror
-            @endif
-        </div>
-       <div class="form-group">
-       Gender <input type="text" name="gender" value="{{old('gender')}}" placeholder="Female or Male" >
+         @endif
+         </div>
+        
+         <div class="input-container">
+            <label for="lastname">Last name</label>
+           <input type="text" class="input-field" name="lastname" value="{{ old('lastname')}}"> 
+           @if ($errors)
+           @error ('lastname')
+               <p style="color: red">{{$message}}</p>
+           @enderror
+          @endif
+         </div>
        
-        @if ($errors)
+         </div>
+    
+       <div class="form-group">
+         <div class="input-container">
+            <label for="gender">Gender</label>
+            <input type="text" name="gender" class="input-field" value="{{old('gender')}}"  >
+            @if ($errors)
             @error ('gender')
-                <p>{{$message}}</p>
+                <p style="color: red">{{$message}}</p>
             @enderror
         @endif
-       </div>
+         </div>
+   
        <br>
-       <div class="form-group">
-         Age: <input type="text" name="age" value="{{old('age')}}" placeholder="age">
-         @if ($errors)
-           @error ('age')
-             <p>{{$message}}</p>
-            @enderror
-         @endif   
+         <div class="input-container">
+            <label for="age">Age</label>
+            <input type="text" name="age" class="input-field" value="{{old('age')}}">
+            @if ($errors)
+            @error ('age')
+              <p style="color: red">{{$message}}</p>
+             @enderror
+          @endif  
+         </div>
+       
        </div>
-       <div class="form-group">
-          Address: <input type="text" name="address" value="{{ old('address')}}" placeholder="address">
-          @if ($errors)
+       <div >
+         <div class="input-container">
+            <label for="email">Email address</label>
+            <input type="email" style="width: 380px" name="email" class="input-field"  value="{{ old('email')}}">
+            @if ($errors)
+            @error ('email')
+               <p style="color: red">{{$message}}</p>
+            @enderror
+         @endif
+         </div>
+         
+        </div>
+       <div>
+         <div class="input-container">
+            <label for="address">Address</label>
+            <input type="text" style="width: 380px" name="address" class="input-field" value="{{ old('address')}}" >
+            @if ($errors)
             @error ('address')
-                <p>{{$message}}</p>
+                <p style="color: red">{{$message}}</p>
             @enderror
           @endif
+         </div>
+     
        </div>
         <div class="form-group">
          <select name="courses">
@@ -78,25 +101,32 @@
 
        <br>
        <div class="form-group">
-          Password: <input type="password" name="password" placeholder="password" value="{{ old('password')}}">
-          @if ($errors)
+         <div class="input-container">
+            <label for="password">Password</label>
+            <input type="password" class="input-field" name="password" value="{{ old('password')}}">
+            @if ($errors)
             @error ('password')
-                <p>{{$message}}</p>
+                <p style="color: red">{{$message}}</p>
             @enderror
           @endif
-       </div>
-       <div class="form-group">
-            Confirm password: <input type="password" name="password_confirmation" placeholder="confirm password">
+         </div>
+       
+         <div class="input-container">
+            <label for="password_confirmation">Confirm Password</label>
+            <input type="password" class="input-field" name="password_confirmation" >
+         </div>
             @if ($errors)
                @error ('password_confirmation')
-                  <p>{{$message}}</p>
+                  <p style="color: red">{{$message}}</p>
                @enderror
             @endif
        </div>
-       <div class="">
+       <div class="register-btn">
           <input type="submit" value="Sign Up">
+          <p>Already have an Account?<a href="/login">Login.</a></p>
        </div>
-       <p>Already have an Account?<a href="/login">Login.</a></p>
+      
     </form>
+   </div>
 </body>
 </html>

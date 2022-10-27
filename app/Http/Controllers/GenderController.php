@@ -172,6 +172,9 @@ class GenderController extends Controller
         return redirect('/');
     }
 
+    public function about(){
+        return view('about');
+    }
    
 
     public function courses(){

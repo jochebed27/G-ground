@@ -32,4 +32,6 @@ Route::get('delete/{id}', [GenderController::class, 'destroy'])->name('delete')-
 Route::get('/info/{id}',[GenderController::class,'info'])->name('info');
 Route::get('/courses', [GenderController::class, 'courses'])->middleware('auth');
 Route::get('/blog', [GenderController::class, 'blog']);
+Route::get('/about', [GenderController::class, 'about']);
+
 

@@ -12,7 +12,7 @@
 <body>
     <div class="container">
       <nav class="nav-container">
-      <h1>Logo</h1>
+        <h1><a href="/" style="text-decoration: none">Logo</a></h1>
         <ul class="nav-links">
            @auth
            <a href="/" style="color: black">Home</a>
@@ -25,11 +25,11 @@
            </select>
            <a href="/logout">Logout</a>     
            @else
-           <a href="/" style="color: black">Home</a>
-           <a href="#about" style="color: black">About Us</a>
-           <a href="#" style="color: black">Contact</a>
-           <a href="/blog" style="color: black">Blog</a>
-           <a class='login-btn' href="/login">Login</a>    
+           <a href="/" class="link" style="color: black">Home</a>
+           <a href="/about" class="link" style="color: black">About Us</a>
+           <a href="#" class="link" style="color: black">Contact</a>
+           <a href="/blog" class="link" style="color: black">Blog</a>
+           <a class='login-btn'  href="/login">Login</a>    
            <a  class="reg-btn" href="/signUp">Register</a>
            @endauth
         </ul>
@@ -82,9 +82,42 @@
       </div>
       <div class="mission">
           <h1 class="header">Our Mission</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi magni animi aliquam, unde incidunt temporibus ipsum pariatur ut, qui a ipsa ducimus laudantium totam vero? Possimus quibusdam quas, adipisci provident debitis sit! Repellat quae provident iusto dolore, porro optio vitae itaque alias blanditiis tempora libero enim vero saepe obcaecati ullam consequuntur laboriosam sunt cumque nihil quidem minima illum. Distinctio quo officiis corrupti beatae sequi, culpa consequatur rem veniam accusamus exercitationem deleniti saepe iste dolorem voluptatum minus dicta ab veritatis omnis.</p>
+          <p>Ensuring all genders have equal opportunity for economic growth and public life.Also,to empower boys and girls with digital skills, while creating awareness on the social problems that causes gender barriers such as gender-based violence, gender inequality in education, child marriage,etc.</p>
       </div>
     </div>
+
+    <footer>
+      <div class="rahisi_sect">
+          <h1 class="rahisi">Logo</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Nam mollis, justo nec porttitor auctor, erat sapien faucibus lectus, 
+              vel tempor dolor augue et lectus. 
+          </p>
+      </div>
+
+      <div class="home_sect">
+          <h1 class="home">Home</h1>
+          <ul>
+              <li>About Us</li>
+              <li>Contact</li>
+              <li>Login</li>
+              <li>Register</li>
+          </ul>
+      </div>
+
+  
+
+      <div class="contact_sect">
+          <h1 class="contact">Contact</h1>
+          <p>G-gram@gmail.com</p>
+          <ul>
+              <li><i class="fa-brands fa-square-facebook fa-2xl"></i></li>
+              <li><i class="fa-brands fa-square-twitter fa-2xl"></i></li>
+              <li><i class="fa-brands fa-linkedin fa-2xl"></i></li>
+              <li><i class="fa-brands fa-square-instagram fa-2xl"></i></li>
+          </ul>
+      </div>
+</footer>
 
   </div>
 </body>

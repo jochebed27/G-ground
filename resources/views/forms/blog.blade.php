@@ -9,6 +9,30 @@
 </head>
 <body>
     <div>
+        <nav class="nav-container">
+            <h1>Logo</h1>
+              <ul class="nav-links">
+                 @auth
+                 <a href="/" style="color: black">Home</a>
+                 <a href="#about" style="color: black">About Us</a>
+                 <a href="#" style="color: black">Contact</a>
+                 
+                 
+                 <select>
+                  <option value="Courses">Courses</option>
+                 </select>
+                 <a href="/logout">Logout</a>     
+                 @else
+                 <a href="/" class="link" style="color: black">Home</a>
+                 <a href="#about" class="link" style="color: black">About Us</a>
+                 <a href="#" class="link" style="color: black">Contact</a>
+                 <a href="/blog" class="link" style="color: black">Blog</a>
+                 <a class='login-btn'  href="/login">Login</a>    
+                 <a  class="reg-btn" href="/signUp">Register</a>
+                 @endauth
+              </ul>
+            </nav>
+    <div class="content-wrapper">
         <div class="flex-container">
             <img src="https://cdn.vanguardngr.com/wp-content/uploads/2021/03/1_na3zwwQQ43y-SoBiq6Lq5Q.png" alt="" class="header-image">
             <div>
@@ -41,6 +65,7 @@
                 <button class="load-more">Load More</button>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>

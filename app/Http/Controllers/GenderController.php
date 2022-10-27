@@ -17,6 +17,7 @@ class GenderController extends Controller
      */
     public function index()
     {
+
         return view('index');
     }
 
@@ -45,6 +46,7 @@ class GenderController extends Controller
             'age' => 'required',
             'email' => 'required|unique:genders',
             'address' => 'required',
+            'courses' => 'required',
             'password' => 'required|confirmed'
         ]);
         //  dd($form_data); 
@@ -55,6 +57,7 @@ class GenderController extends Controller
         $gender -> age = $request -> age;  
         $gender -> email = $request -> email;  
         $gender -> address = $request -> address;
+        $gender -> courses = $request -> courses;
         $gender -> password=Hash::make($request->password);
         $gender -> save();
 
@@ -183,6 +186,11 @@ class GenderController extends Controller
 
     public function blog(){
         return view('forms.blog');
+    }
+
+    public function donate(Request $request){
+        $request->session()->flash('Donation was successful');
+        return view('index');
     }
 
     

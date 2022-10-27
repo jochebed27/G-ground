@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('age');
             $table->string('email');
             $table->longtext('address');
+            $table->string('courses');
             $table->string('password');
             $table->timestamps();
         });

@@ -83,6 +83,21 @@
          </div>
      
        </div>
+        <div class="form-group">
+         <select name="courses">
+            <option value="Courses">Courses</option>
+            <option value="Graphic Design">Graphic Design</option>
+            <option value="Web Design">Web Design</option>
+            <option value="Computer General Application">Computer General Application</option>
+            <option value="Database Management System">Database Management System</option>
+            <option value="Microsoft">Microsoft</option>
+           </select>
+         @if ($errors)
+           @error ('courses')
+               <p>{{$message}}</p>
+           @enderror
+         @endif
+       </div>
 
        <br>
        <div class="form-group">

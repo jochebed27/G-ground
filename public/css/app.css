@@ -1,0 +1,245 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 50px;
+}
+.flex-container h1{
+    font-size: 52px;
+    color: blue;
+    font-weight: 900;
+}
+
+.header-image{
+    width: 500px;
+}
+
+.post-large{
+    width: 32rem;
+    height: 32rem;
+    /* border: 1px solid red; */
+}
+.post-large span{
+    font-weight: bold;
+    font-size: 32px;
+}
+.post-large p{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.post-large img{
+    width: 32rem;
+}
+.post-small{
+    width: 22rem;
+    height: 32rem;
+    /* border: 1px solid red; */
+}
+.post-small img{
+    width: 22rem;
+    height: 22rem;
+    object-fit: fill;
+}
+.post-small span{
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.post-small p{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.load-more{
+    width: 204px;
+    height: 70px;
+    border: 1px solid #FF5480;
+    color: #FF5480;
+    border-radius: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: white;
+    opacity: 97%;
+    backdrop-filter: blur(20px);
+    left: 0;
+    right: 0;
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 72px;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.nav-links a{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    font-family: monospace;
+    text-decoration: none;
+}
+
+.login-btn{
+    background-color: #FF5480;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 106px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.reg-btn{
+    background-color: transparent;
+    display: flex;
+    border: 1px solid #FF5480;
+    align-items: center;
+    justify-content: center;
+    color: #FF5480;
+    font-weight: bold;
+    width: 106px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.hero-section{
+    background-image: url('https://st4.depositphotos.com/13193658/39057/i/600/depositphotos_390574314-stock-photo-happy-woman-white-shirt-holding.jpg');
+    background-size: cover;
+    height: 834px;
+}
+
+.donate-container{
+    position: absolute;
+    left: 50px;
+    right: 850px;
+    border-radius: 10px;
+    padding: 24px 24px;
+    top: 330px;
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    z-index: 20px;
+}
+
+.donate-container h1{
+    color: #d1cbcb;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.donate-container .donate-amount{
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #FF5480;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #FF5480;
+    font-weight: bold;
+    transition: all;
+    transition-duration: 600ms;
+    cursor: pointer;
+}
+
+.donate-container .donate-amount:hover{
+    background-color: #FF5480;
+    color: white;
+}
+
+.donate-container .donate-btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.donate-container .donate-button{
+    width: 500px;
+    height: 50px;
+    background-color: #FF5480;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+.enroll-container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF5480;
+    font-weight: bold;
+    border: 1px solid #FF5480;
+    border-radius: 5px;
+    margin-top: 24px;
+    width: 500px;
+    height: 50px;
+}
+
+.enroll-container h1{
+    color: #FF5480;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.middle-section{
+    padding-top: 30px;
+    height: 700px;
+    /* background-color: #ebebed; */
+    /* background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover; */
+    background-color: white;
+    opacity: 70%;
+
+}
+
+.middle-section .header{
+    font-size: 62px;
+    font-weight: bolder;
+    color: #FF5480;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    width: 750px;
+    text-align: center;
+}
+
+.stat-container{
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.stat-card{
+    width: 350px;
+    height: 100px;
+    background-color: white;
+    border-left: 8px solid #FF5480;
+    border-bottom: 3px solid #FF5480;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    box-shadow: 0.5px 0.5px 1px 1px ;
+
+}

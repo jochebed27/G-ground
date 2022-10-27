@@ -145,9 +145,8 @@ class GenderController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            $genders=Gender::find($request->email);
- 
-            return view('/page',compact('genders'));
+            $genders=Gender::find($request->email); 
+            return view('index',compact('genders'));
         }
  
         return back()->withErrors([
